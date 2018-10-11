@@ -32,18 +32,16 @@ class CashRegister
   end
 
   def items
-    item_names = []
     #returns an array of items added to the cart
+    item_names = []
     @cart.each do |item_data|
       #still need to account for multiple quantities of items
       count = item_data[:quantity]
       count.times do
         item_names << item_data[:name]
       end #of count do
-      #binding.pry
     end # of do
     item_names
-    #binding.pry
   end
 
 def void_last_transaction
