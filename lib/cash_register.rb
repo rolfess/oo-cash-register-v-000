@@ -38,7 +38,7 @@ def items
   #returns an array of items added to the cart
   @cart.each do |item_data|
     #need to account for multiple quantities of items
-     #binding.pry 
+     #binding.pry
      item_names << item_data[:name]
   end # of do
   item_names
