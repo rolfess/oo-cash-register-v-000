@@ -25,7 +25,7 @@ class CashRegister
 
   def apply_discount
     #success message or no discount to apply. After discount, total is...
-    binding.pry
+    #binding.pry
     if @discount == 0
       return "There is no discount to apply."
     else
