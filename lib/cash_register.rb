@@ -24,9 +24,8 @@ class CashRegister
   end
 
   def apply_discount
-    discount_percentage = discount / 100
     #success message or no discount to apply. After discount, total is...
-    #binding.pry
+    binding.pry
     if @discount == 0
       return "There is no discount to apply."
     else
