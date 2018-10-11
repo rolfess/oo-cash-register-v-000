@@ -30,8 +30,9 @@ class CashRegister
       return "There is no discount to apply."
     else
       #long form but to ensure calculates ok
-      @total = @discount * 0.01 * @total + @total
-      return "After the discount, the total comes to $#{@total}."
+      # @total = @discount * 0.01 * @total + @total
+      @total = @discount * @total / 100 + @total
+      return "After the discount, the total comes to $#{@total.}."
     end # of else
   end
 
