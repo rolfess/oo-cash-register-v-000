@@ -35,7 +35,7 @@ end
 def items
   #returns an array of items added to the cart
   @cart.each do |item_data|
-    puts "#{item_data}"
+    puts "#{item_data[:item]}"
   end # of do
 end
 
