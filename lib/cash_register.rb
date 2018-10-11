@@ -17,6 +17,7 @@ def add_item(item, price, quantity = 1)
   item_data[:price] = price
   item_data[:quantity] = quantity
   @final_cart << item_data
+  @cart << item
   @last_transaction = price * quantity
   @total = @last_transaction + @total
 end
