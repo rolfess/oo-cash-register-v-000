@@ -6,6 +6,7 @@ class CashRegister
     @total = 0
     @discount = discount
     @cart = []
+    @last_transaction = 0
   end
 
 
@@ -16,7 +17,8 @@ def add_item(item, price, quantity = 1)
   cart[:price] = price
   cart[:quantity] = quantity
   @final_cart << cart
-  @total = price * quantity + @total
+  @last_transaction = price * quantity
+  @total = @last_transaction + @total
 end
 
 def apply_discount
@@ -25,7 +27,7 @@ def apply_discount
     return "There is no discount to apply."
   else
     @total = @total * @discount + @total
-    return "After the discount, the total comes to $#{@total}." 
+    return "After the discount, the total comes to $#{@total}."
   end # of else
 end
 
