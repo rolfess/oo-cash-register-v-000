@@ -1,4 +1,4 @@
-
+require 'pry'
 class CashRegister
  attr_accessor :cash_register, :total, :discount
 
@@ -34,7 +34,9 @@ end
 
 def items
   #returns an array of items added to the cart
-
+  @cart.each do |item_data|
+    puts "#{item_data}"
+  end # of do
 end
 
 def void_last_transaction
