@@ -19,7 +19,7 @@ def add_item(item, price, quantity = 1)
   @cart << item_data
   @last_transaction = price * quantity
   @total = @last_transaction + @total
-  binding.pry
+  #binding.pry
 end
 
 def apply_discount
