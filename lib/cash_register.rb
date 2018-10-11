@@ -10,7 +10,13 @@ class CashRegister
 
 
 def add_item(item, price, quantity = 1)
-  #accept item, price, optional quantity, adds to total and remembers total
+  #accept item, price, optional quantity so need a default value, adds to total and remembers total
+  cart = {}
+  cart[:item] = item
+  cart[:price] = price
+  cart[:quantity] = quantity
+  @final_cart << cart
+  @total = price * quantity + @total
 end
 
 def apply_discount
