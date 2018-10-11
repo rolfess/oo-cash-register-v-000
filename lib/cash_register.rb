@@ -20,16 +20,13 @@ class CashRegister
     @cart << item_data
     @last_transaction = price * quantity
     @total = @last_transaction + @total
-    #binding.pry
   end
 
   def apply_discount
     #success message or no discount to apply. After discount, total is...
-    #binding.pry
     if @discount == 0
       return "There is no discount to apply."
     else
-      #long form but to ensure calculates ok
       @total -= @discount * 0.01 * @total
       return "After the discount, the total comes to $#{@total.to_i}."
     end # of else
