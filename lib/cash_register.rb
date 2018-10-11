@@ -16,10 +16,11 @@ class CashRegister
     item_data[:name] = item
     item_data[:price] = price
     item_data[:quantity] = quantity
-    price.class
+    
     @cart << item_data
     @last_transaction = price * quantity
     @total = @last_transaction + @total
+    price.class
     #binding.pry
   end
 
