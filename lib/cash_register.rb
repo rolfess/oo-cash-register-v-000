@@ -31,7 +31,7 @@ class CashRegister
     else
       #long form but to ensure calculates ok
       @total -= @discount * 0.01 * @total
-      return "After the discount, the total comes to $#{@total}."
+      return "After the discount, the total comes to $#{@total.to_i}."
     end # of else
   end
 
