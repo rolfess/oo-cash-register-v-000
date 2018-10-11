@@ -34,7 +34,7 @@ end
 
 def items
   #returns an array of items added to the cart
-  
+
 end
 
 def void_last_transaction
