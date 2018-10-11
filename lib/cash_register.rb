@@ -12,11 +12,11 @@ class CashRegister
 
 def add_item(item, price, quantity = 1)
   #accept item, price, optional quantity so need a default value, adds to total and remembers total
-  cart = {}
-  cart[:item] = item
-  cart[:price] = price
-  cart[:quantity] = quantity
-  @final_cart << cart
+  item_data = {}
+  item_data[:item] = item
+  item_data[:price] = price
+  item_data[:quantity] = quantity
+  @final_cart << item_data
   @last_transaction = price * quantity
   @total = @last_transaction + @total
 end
