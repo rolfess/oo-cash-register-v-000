@@ -16,7 +16,6 @@ class CashRegister
     item_data[:name] = item
     item_data[:price] = price
     item_data[:quantity] = quantity
-
     @cart << item_data
     @last_transaction = price * quantity
     @total = @last_transaction + @total
@@ -34,10 +33,14 @@ class CashRegister
 
   def items
     item_names = []
+    count = 1
     #returns an array of items added to the cart
     @cart.each do |item_data|
       #still need to account for multiple quantities of items
-      item_names << item_data[:name]
+      count = item_data[:quantity]
+      count.times do
+        item_names << item_data[:name]
+      end #of count do
       #binding.pry
     end # of do
     item_names
