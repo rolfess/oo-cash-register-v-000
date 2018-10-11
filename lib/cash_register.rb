@@ -21,6 +21,12 @@ end
 
 def apply_discount
   #success message or no discount to apply. After discount, total is...
+  if @discount == 0
+    return "There is no discount to apply."
+  else
+    @total = @total * @discount + @total
+    return "After the discount, the total comes to $#{@total}." 
+  end # of else
 end
 
 def items
