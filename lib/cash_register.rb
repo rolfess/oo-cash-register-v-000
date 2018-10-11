@@ -39,6 +39,7 @@ end
 
 def void_last_transaction
   #removes the last item from the cart and total
+  @total = @total - @last_transaction
 end
 
 
