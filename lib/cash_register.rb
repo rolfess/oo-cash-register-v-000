@@ -32,7 +32,7 @@ class CashRegister
       #long form but to ensure calculates ok
       # @total = @discount * 0.01 * @total + @total
       @total = @discount * @total / 100 + @total
-      return "After the discount, the total comes to $#{@total.}."
+      return "After the discount, the total comes to $#{@total}."
     end # of else
   end
 
