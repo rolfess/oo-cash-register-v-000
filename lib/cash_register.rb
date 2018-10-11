@@ -33,7 +33,6 @@ class CashRegister
 
   def items
     item_names = []
-    count = 1
     #returns an array of items added to the cart
     @cart.each do |item_data|
       #still need to account for multiple quantities of items
