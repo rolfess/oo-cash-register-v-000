@@ -16,8 +16,7 @@ def add_item(item, price, quantity = 1)
   item_data[:item] = item
   item_data[:price] = price
   item_data[:quantity] = quantity
-  @final_cart << item_data
-  @cart << item
+  @cart << item_data
   @last_transaction = price * quantity
   @total = @last_transaction + @total
 end
@@ -35,6 +34,7 @@ end
 
 def items
   #returns an array of items added to the cart
+  
 end
 
 def void_last_transaction
