@@ -24,6 +24,7 @@ class CashRegister
   end
 
   def apply_discount
+    discount_percentage = discount / 100
     #success message or no discount to apply. After discount, total is...
     #binding.pry
     if @discount == 0
@@ -31,7 +32,7 @@ class CashRegister
     else
       #long form but to ensure calculates ok
       # @total = @discount * 0.01 * @total + @total
-      @total = @discount * @total / 100 + @total
+      @total = @discount * @total + @total
       return "After the discount, the total comes to $#{@total}."
     end # of else
   end
@@ -40,9 +41,9 @@ class CashRegister
     item_names = []
     #returns an array of items added to the cart
     @cart.each do |item_data|
-      #need to account for multiple quantities of items
-       #binding.pry
-       item_names << item_data[:name]
+      #still need to account for multiple quantities of items
+      item_names << item_data[:name]
+      #binding.pry
     end # of do
     item_names
     #binding.pry
